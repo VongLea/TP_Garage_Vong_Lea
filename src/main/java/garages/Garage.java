@@ -5,11 +5,11 @@ public class Garage {
 	private String name;
 
 	public Garage(String s) {
-		name = s;
+		this.name = s;
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -22,7 +22,7 @@ public class Garage {
 
 	@Override
 	public String toString() {
-		return "Garage " + name;
+		return "Garage " + this.name;
 	}
 
 }

@@ -12,40 +12,40 @@ public class Stationnement {
 	private Date fin;
 
 	public Stationnement(Voiture v, Garage g) {
-		myCar = v;
-		myGarage = g;
+		this.myCar = v;
+		this.myGarage = g;
 	}
 
 	public Voiture getCar() {
-		return myCar;
+		return this.myCar;
 	}
 
 	public Garage getGarage() {
-		return myGarage;
+		return this.myGarage;
 	}
 
 	public Date getEntree() {
-		return entree;
+		return this.entree;
 	}
 
 	public Date getFin() {
-		return fin;
+		return this.fin;
 	}
 
 	public void terminer() {
-		fin = new Date();
+		this.fin = new Date();
 	}
 
 	public boolean estEnCours() {
-		return (fin == null);
+		return (this.fin == null);
 	}
 
 	@Override
 	public String toString() {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyy");
 		return String.format("Stationnement{ entree=%s, %s }",
-			dateFormat.format(entree),
-			estEnCours() ? "en cours" : "sortie=" + dateFormat.format(fin)
+			dateFormat.format(this.entree),
+			estEnCours() ? "en cours" : "sortie=" + dateFormat.format(this.fin)
 		);
 	}
 
